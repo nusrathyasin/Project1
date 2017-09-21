@@ -71,7 +71,7 @@ body{
 	padding-left:20px;
 	padding-right:20px;
 	border-right:1px solid #7028ed;
-	font-style:justify;
+	text-align:justify;
 	font-family: 'Josefin Sans', sans-serif;
 }
 .service{
@@ -154,7 +154,7 @@ body{
 	color:black;
 	padding:5px;
 	margin-top:10px;
-	font-style:bold;
+	font-weight:bold;
 }
 @media only screen and (max-width: 1180px) and (min-width: 900px){
 #section2{
