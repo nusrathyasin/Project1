@@ -51,27 +51,24 @@ body{
 	margin-top:430px;
 	background-color:#37048e;
 }
-.whom{
-	background-color:#37048e;
-	padding-left:80px;
-	padding-right:80px;
-	padding-top:13px;
-	padding-bottom:13px;
-	display:flex;
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 #dev{
+	float:left;
 	padding-left:20px;
 	padding-top:66px;
 	padding-bottom:66px;
-	border-left:1px solid #7028ed;
 }
+
 #about{
 	padding-top:66px;
 	padding-bottom:66px;
 	padding-left:20px;
 	padding-right:20px;
-	border-right:1px solid #7028ed;
-	text-align:justify;
+	font-style:justify;
 	font-family: 'Josefin Sans', sans-serif;
 }
 .service{
