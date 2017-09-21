@@ -62,7 +62,6 @@ body{
 	padding-top:66px;
 	padding-bottom:66px;
 }
-
 #about{
 	padding-top:66px;
 	padding-bottom:66px;
@@ -170,10 +169,6 @@ body{
 #section2{
 	position:relative;
 	margin-top:350px;
-}
-.whom{
-	padding-left:10px;
-	padding-right:10px;
 }
 #slideshow img{
 	height:350px;
