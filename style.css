@@ -51,27 +51,28 @@ body{
 	margin-top:430px;
 	background-color:#37048e;
 }
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+.whom{
+	background-color:#8b4cf7;
+	padding-left:100px;
+	padding-right:100px;
+	padding-top:13px;
+	padding-bottom:13px;
+	display:flex;
 }
 #dev{
-	float:left;
 	padding-left:20px;
 	padding-top:66px;
 	padding-bottom:66px;
+	border-left:1px solid #219d84;
 }
-
 #about{
 	padding-top:66px;
 	padding-bottom:66px;
 	padding-left:20px;
 	padding-right:20px;
+	border-right:1px solid #219d84;
 	font-style:justify;
-	font-family: 'Josefin Sans', sans-serif;
-}
-.service{
+}.service{
 	margin-top:40px;
 	margin-left:40px;
 	margin-right:30px;
