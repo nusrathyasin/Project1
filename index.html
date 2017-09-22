@@ -17,9 +17,10 @@
     <script type="text/javascript" src="jquery-1.10.1.min.js"></script>
   <!--css file -->
      <link href="style.css" rel="stylesheet" type="text/css" />
-     
+     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <!--jquery code -->
 <script type="text/javascript">
+
 	$("#slideshow > div:gt(0)").hide();
 	setInterval(function() {
 	$('#slideshow > div:first')
@@ -29,10 +30,16 @@
     .end()
     .appendTo('#slideshow');
 }, 3000)
+$(document).ready(function(){
+    $("input,textarea").focus(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+});
  </script>
  </head>
  <body>
 <!-- Header starts -->
+
 	<div id="header">
 	  <div class="row">
 		<div class="col-md-6" id="image">
@@ -67,10 +74,12 @@
 <!-- End of slideshow -->
 <!-- About -->
 	<div id="section2" class="container-fluid">
-		<div class="whom">
-			
+		<div class="clearfix">
+			<div id="dev">
+				<img src="project 1/nachi.png" width="100" alt="Naachiar’s &amp; Co" class="img-responsive"/>  <!-- Naachiar’s & Co icon -->
+			</div>
 			<div id="about">
-				<p><span style="font-size:30px;color:#dafcf6;line-height:23px">ABOUT US</span><br/>
+				<p><span style="font-size:30px;color:#dafcf6;line-height:23px" id="headng">ABOUT US</span><br/>
 				<p> <span style="font-size:15px;color:#dafcf6;text-align:justify">Naachiar’s &amp; Co understands that in a world that's constantly in motion, you have to build on your momentum;slowing down means losing valuable opportunities. It is by this principle that it dedicates its resources and capabilities towards keeping its customers ahead, by being a reliable and punctual supplier and transshipment partner.Supported by its strong logistics framework, and a trade network built over three decades of interaction with the global export industry,it promises to source and supply products of the highest standards to any part of the world.
 				</span></p>
 				</p>
@@ -154,9 +163,10 @@
 			<button id="submit">Send </button>
 		</form>
 		</div>
-		<div class="col-md-6" id="map">
+		<div class="col-md-6" id="mapng">
 			<h4  style="color:white;font-size:20px;font-weight:bold;float:left">WE ARE HERE!!</h4><br/><br/><br/>
-			<img src="project 1/map_thumb.jpg" class="img-responsive" alt="map-where we are" />
+			<!-- <img src="project 1/map_thumb.jpg" class="img-responsive" alt="map-where we are" /> -->
+			<div id="map" style="width:80%;height:200px"></div>
 			<div id="addrss">
 				<h4>Address</h4>
 				<h5>Naachiar’s &amp; Co.<br/>
@@ -174,5 +184,43 @@
 		<h6>Copyright &copy; 2017 <b>Naachiar’s &amp; Co</b>,Design - Nusrath</h6>
 	</div>
   </div>
+
+  <script>
+  
+	
+function myMap() {
+  var amsterdam = new google.maps.LatLng(9.9252,78.1198);
+
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: amsterdam, zoom: 7};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+
+  var myCity = new google.maps.Circle({
+    center: amsterdam,
+    radius: 50000,
+    strokeColor: "#0000FF",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: "#0000FF",
+    fillOpacity: 0.4
+  });
+  myCity.setMap(map);
+}
+
+window.sr = ScrollReveal({ reset: true });
+
+// Customizing a reveal set
+sr.reveal('.header', { delay: 200, duration: 900 });
+    sr.reveal('#slideshow', { delay: 500, duration: 1200 });
+    sr.reveal('#section2', { delay: 800, duration: 1500 });
+    sr.reveal('#section3', { delay: 300, duration: 1200 });
+	 sr.reveal('#section4', { delay: 300, duration: 1200 });
+	  sr.reveal('#section5', { delay: 300, duration: 1200 });
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlWb4hAe8sz-KOv0rQUHUHatC8U6xAbC8&callback=myMap"></script>
+
+
+  
  </body>
 </html>
